@@ -1,38 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Inter Light';
+  color: #555555;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Inter Medium';
+  font-size: 1.2em;
+}
+
+h4 {
+  font-family: 'Inter Thin';
+}
+
+h6 {
+  font-family: 'Inter ExtraLight';
+}
+
+a {
+  color: #0f5ccf;
+}
+
 .App {
+}
+
+.jackpot-header {
+  font-size: 50px;
+}
+
+.top-status-bar {
+  height: 3vh;
+  display: flex;
+  background: black;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-nav {
+  height: 12vh;
+  background: #f7f7f9;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 50px;
+  padding: 0 60px;
+  overflow-x: scroll;
+}
+
+.action-nav {
+  height: 20vh;
+  background: #f7f7f9;
+}
+
+.footer {
+  height: 10vh;
+  background: #f7f7f9;
+  color: #555555;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.right-nav {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  align-items: center;
+  column-gap: 10px;
+  overflow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-links {
+  display: grid;
+  grid-row: 1 / 3;
+  grid-row-end: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #666769;
+  column-gap: 1em;
+  font-size: 1.3em;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links:hover {
+  cursor: pointer;
+}
+
+.play-button {
+  width: 100px;
+  height: 40px;
+  background: rgba(217, 217, 217, 0.14);
+  border: 2px solid #cc1313;
+  border-radius: 80px;
+  font-family: 'Inter';
+  font-size: 1.2em;
+  color: #cc1313;
+  font-weight: 400;
+}
+
+.play-button:hover {
+  cursor: pointer;
+}
+
+.action-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.select-options:hover {
+  cursor: pointer;
+  color: #cc1313;
+  border: 2px solid #cc1313;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.options {
+  display: flex;
+  align-items: center;
+}
+
+.select-options {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 2em;
+  border-radius: 80px;
+  color: #666769;
+  border: solid 2px #d2d2d4;
+  flex-shrink: 0;
+}
+
+.option-line {
+  border-top: 2px solid #d2d2d4;
+  width: 50px;
+}
+
+.story-container {
+  height: 55vh;
+  background: #f7f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+  color: #d2d2d4;
+}
+
+.right-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+  color: #d2d2d4;
+}
+
+.right-arrow:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+
+.left-arrow:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+
+.story-text {
+  height: 400px;
+  width: 400px;
+  hyphens: auto;
+  color: #555555;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: 'Inter Light';
+}
+
+.action-box {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mega-millions {
+  height: 400px;
+  width: 300px;
+  border: 2px solid #2f2d2d;
+  border-radius: 10px;
+  text-align: center;
+  display: grid;
+  padding: 30px;
+  row-gap: 4px;
+  font-size: 1.2em;
+}
+
+.mega-millions:hover {
+  border: 2px solid #36c36a;
+  color: #36c36a;
+  cursor: pointer;
+}
+
+.numbers-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0px 10px;
+}
+
+.winning-number {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  row-gap: 10px;
+  border-radius: 20px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.4em;
+  backdrop-filter: blur(10px);
+}
+
+.red {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  filter: blur(3px);
+  background: #f7282a;
+}
+
+.lucky-number {
+  position: absolute;
+  color: #fff;
 }
