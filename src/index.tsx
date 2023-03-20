@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { WagmiConfig, createClient } from 'wagmi';
-import { goerli } from 'wagmi/chains';
+import { sepolia } from 'wagmi/chains';
 import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme';
 
 const client = createClient(
   getDefaultClient({
-    appName: 'Jackpot Lottery on Goerli',
+    appName: 'Jackpot Lottery on Sepolia',
     infuraId: process.env.REACT_APP_INFURA_ID,
     alchemyId: process.env.REACT_APP_ALCHEMY_ID,
-    chains: [goerli],
+    chains: [sepolia],
   })
 );
 

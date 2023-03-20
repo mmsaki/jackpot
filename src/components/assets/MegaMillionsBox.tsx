@@ -15,7 +15,9 @@ import {
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-const blockTarget = '8676474';
+import ToastBetOpen from './ToastBetOpen';
+
+const blockTarget = '3123691';
 
 const MegaMillionsBox = () => {
   const Completionist = () => <span>You are good to go!</span>;
@@ -43,6 +45,7 @@ const MegaMillionsBox = () => {
         colorScheme='gray'
         bg='whiteAlpha.400'
         className='mega-millions'
+        // onClick={addToast}
       >
         <Box>
           <Box mb='8'>
@@ -53,6 +56,7 @@ const MegaMillionsBox = () => {
               </Badge>
             </Text>
             <Text>~500 ETH Balance</Text>
+            <ToastBetOpen />
           </Box>
           <Box mb='8'>
             <Text fontSize='lg' fontWeight='normal'>
@@ -85,7 +89,7 @@ const MegaMillionsBox = () => {
               <Link
                 isExternal
                 color='blue'
-                href={`https://goerli.etherscan.io/block/${blockTarget}`}
+                href={`https://sepolia.etherscan.io/block/${blockTarget}`}
               >
                 {blockTarget}
                 <ExternalLinkIcon mx='2px' />

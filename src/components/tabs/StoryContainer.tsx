@@ -13,7 +13,7 @@ import { MdCheckCircle } from 'react-icons/md';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const lastTxHash =
-  '0x5171197591451305c64f4af131835df8edb22768babaeaf885cfac632409a371';
+  '0xe1709502ad9bcacab16476cbb53e0cd9e54090f169f13fe80714a55cb3d3a500';
 const StoryContainer = () => {
   return (
     <Box className='story-container'>
@@ -30,7 +30,7 @@ const StoryContainer = () => {
             <Link
               isExternal
               color='blue'
-              href={`https://goerli.etherscan.io/tx/${lastTxHash}`}
+              href={`https://sepolia.etherscan.io/tx/${lastTxHash}`}
             >
               {lastTxHash}
               <ExternalLinkIcon mx='2px' />

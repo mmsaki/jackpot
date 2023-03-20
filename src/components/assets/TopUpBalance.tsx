@@ -10,17 +10,38 @@ import {
 import React from 'react';
 import Countdown, { CountdownRenderProps, zeroPad } from 'react-countdown';
 import { useAccount, useBalance } from 'wagmi';
+import {
+  useContract,
+  useContractRead,
+  useContractWrite,
+  useProvider,
+} from 'wagmi';
+import lottery from '../../abi/Lottery.json';
 
 const TopUpBalance = () => {
-  const { address, isConnecting, isDisconnected } = useAccount();
-  const { data, isError, isLoading } = useBalance({
+  const provider = useProvider();
+  const contract = useContract({
+    address: '0x921fFD1C2471b153fbbF374E6887A662219b2dFC',
+    abi: lottery.abi,
+    signerOrProvider: provider,
+  });
+
+  const { address, isDisconnected } = useAccount();
+  const { data, isError } = useBalance({
     address: address,
+    watch: true,
+    onSuccess(data) {
+      console.log('😀 Connected', data);
+    },
+    onError(error) {
+      console.log('😐 Error, something went wrong', error);
+    },
   });
 
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
       step: 0.00001,
-      defaultValue: 1.53,
+      defaultValue: 0.123,
       min: 0.1,
       max: 6,
       precision: 5,
