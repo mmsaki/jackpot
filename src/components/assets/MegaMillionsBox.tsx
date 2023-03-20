@@ -43,6 +43,7 @@ const MegaMillionsBox = () => {
         colorScheme='gray'
         bg='whiteAlpha.400'
         className='mega-millions'
+        mr='10'
       >
         <Box>
           <Box mb='8'>

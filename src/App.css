@@ -192,7 +192,6 @@ a {
   height: 50px;
   border-radius: 35px;
   color: #d2d2d4;
-  margin: 0 10px;
 }
 
 .right-arrow {
@@ -200,7 +199,6 @@ a {
   height: 50px;
   border-radius: 35px;
   color: #d2d2d4;
-  margin: 0 10px;
 }
 
 .right-arrow:hover {
@@ -220,7 +218,7 @@ a {
   flex-direction: column;
   row-gap: 20px;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
   font-size: 1.2em;
   font-family: 'Inter Light';
 }
@@ -233,7 +231,7 @@ a {
 }
 
 .mega-millions {
-  width: 300px;
+  width: 400px;
   border: 2px solid #2f2d2d;
   border-radius: 20px;
   text-align: center;
