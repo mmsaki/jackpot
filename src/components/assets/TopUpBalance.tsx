@@ -9,9 +9,14 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import Countdown, { CountdownRenderProps, zeroPad } from 'react-countdown';
-import { ConnectKitButton } from 'connectkit';
+import { useAccount, useBalance } from 'wagmi';
 
 const TopUpBalance = () => {
+  const { address, isConnecting, isDisconnected } = useAccount();
+  const { data, isError, isLoading } = useBalance({
+    address: address,
+  });
+
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
       step: 0.00001,
@@ -48,21 +53,25 @@ const TopUpBalance = () => {
         <Text fontSize='larger' fontWeight='bold'>
           Account Address
         </Text>
-        <Text>{'0xf39F...f266'}</Text>
+        <Text>
+          {address}
+          {isDisconnected && 'Login'}
+        </Text>
       </VStack>
       <VStack mb='8'>
-        <Text fontSize='lg' fontWeight='normal'>
+        <Text fontSize='larger' fontWeight='bold'>
           Your Balance
         </Text>
-        <Text fontSize='larger' fontWeight='bold'>
-          1.23999304 ETH
+        <Text fontSize='lg' fontWeight='normal'>
+          {data?.formatted} {data?.symbol}
+          {isDisconnected && 'Login'}
         </Text>
       </VStack>
       <VStack mb='8'>
-        <Text fontSize='lg' fontWeight='normal'>
+        <Text fontSize='larger' fontWeight='bold'>
           Time Remaining
         </Text>
-        <Text fontSize='larger' fontWeight='bold'>
+        <Text fontSize='larger' fontWeight='normal'>
           <Countdown
             renderer={renderer}
             date={Date.now() + 5000000}
