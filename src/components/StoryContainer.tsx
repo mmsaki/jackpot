@@ -3,6 +3,8 @@ import React from 'react';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 import MegaMillionsBox from './assets/MegaMillionsBox';
 
+const lastTxHash =
+  '0x5171197591451305c64f4af131835df8edb22768babaeaf885cfac632409a371';
 const StoryContainer = () => {
   return (
     <Box className='story-container'>
@@ -16,8 +18,11 @@ const StoryContainer = () => {
             You can play Powerball, Mega Millions, and More from here! Bets are
             Open at:{' '}
             <Text>
-              <Link color='blue' href='/'>
-                0x25d8270fd2bda0958e9f75c717bc9088786866400b8686ceb25ee90fd6f5effd
+              <Link
+                color='blue'
+                href={`https://goerli.etherscan.io/tx/${lastTxHash}`}
+              >
+                {lastTxHash}
               </Link>
               {'. '}
             </Text>

@@ -7,7 +7,6 @@ import {
   Card,
   Link,
   Stack,
-  StackDivider,
   Stat,
   StatArrow,
   StatHelpText,
@@ -15,6 +14,8 @@ import {
   StatNumber,
   Text,
 } from '@chakra-ui/react';
+
+const blockTarget = '8676474';
 
 const MegaMillionsBox = () => {
   const Completionist = () => <span>You are good to go!</span>;
@@ -82,8 +83,11 @@ const MegaMillionsBox = () => {
             </Text>
             <Text fontWeight='normal' fontSize='sm'>
               results from block{' '}
-              <Link color='blue' href='/'>
-                865432
+              <Link
+                color='blue'
+                href={`https://goerli.etherscan.io/block/${blockTarget}`}
+              >
+                {blockTarget}
               </Link>
             </Text>
           </Box>
