@@ -8,8 +8,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import MegaMillionsBox from './assets/MegaMillionsBox';
-import { MdCheckCircle, MdSettings } from 'react-icons/md';
+import MegaMillionsBox from '../assets/MegaMillionsBox';
+import { MdCheckCircle } from 'react-icons/md';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const lastTxHash =
   '0x5171197591451305c64f4af131835df8edb22768babaeaf885cfac632409a371';
@@ -27,10 +28,12 @@ const StoryContainer = () => {
           Open at:{' '}
           <Text>
             <Link
+              isExternal
               color='blue'
               href={`https://goerli.etherscan.io/tx/${lastTxHash}`}
             >
               {lastTxHash}
+              <ExternalLinkIcon mx='2px' />
             </Link>
             {'. '}
           </Text>

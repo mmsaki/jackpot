@@ -6,7 +6,6 @@ import {
   Box,
   Card,
   Link,
-  Stack,
   Stat,
   StatArrow,
   StatHelpText,
@@ -14,6 +13,7 @@ import {
   StatNumber,
   Text,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const blockTarget = '8676474';
 
@@ -47,8 +47,8 @@ const MegaMillionsBox = () => {
         <Box>
           <Box mb='8'>
             <Text fontSize='larger' fontWeight='bold'>
-              MEGA MILLIONS
-              <Badge ml='1' fontSize='0.8em' color='green'>
+              MEGA MILLIONS{' '}
+              <Badge ml='1' fontSize='0.7em' color='green'>
                 New
               </Badge>
             </Text>
@@ -83,10 +83,12 @@ const MegaMillionsBox = () => {
             <Text fontWeight='normal' fontSize='sm'>
               results from block{' '}
               <Link
+                isExternal
                 color='blue'
                 href={`https://goerli.etherscan.io/block/${blockTarget}`}
               >
                 {blockTarget}
+                <ExternalLinkIcon mx='2px' />
               </Link>
             </Text>
           </Box>

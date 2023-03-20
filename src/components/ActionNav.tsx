@@ -8,7 +8,8 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import StoryContainer from './StoryContainer';
+import StoryContainer from './tabs/StoryContainer';
+import TopUp from './tabs/TopUp';
 
 const ActionNav = () => {
   return (
@@ -35,7 +36,7 @@ const ActionNav = () => {
               <StoryContainer />
             </TabPanel>
             <TabPanel>
-              <p></p>
+              <TopUp />
             </TabPanel>
             <TabPanel>
               <p></p>
