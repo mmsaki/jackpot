@@ -1,7 +1,26 @@
 import React from 'react';
 import WinningNumbers from './WinningNumbers';
+import Countdown, { CountdownRenderProps, zeroPad } from 'react-countdown';
 
 const MegaMillionsBox = () => {
+  const Completionist = () => <span>You are good to go!</span>;
+  const renderer = ({
+    hours,
+    minutes,
+    seconds,
+    completed,
+  }: CountdownRenderProps) => {
+    if (completed) {
+      return <Completionist />;
+    } else {
+      return (
+        <span>
+          {zeroPad(hours)} : {zeroPad(minutes)} : {zeroPad(seconds)}
+        </span>
+      );
+    }
+  };
+
   return (
     <div className='action-box'>
       <div className='mega-millions'>
@@ -10,7 +29,13 @@ const MegaMillionsBox = () => {
           <p>500 ETH Balance</p>
         </div>
         <div>
-          <h3>14 : 37 : 00</h3>
+          <h3>
+            <Countdown
+              renderer={renderer}
+              date={Date.now() + 5000000}
+              precision={3}
+            />
+          </h3>
           <p>Time left to buy</p>
         </div>
         <div>
