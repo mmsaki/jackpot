@@ -26,7 +26,9 @@ const ActionNav = () => {
             <Tab className='bet' color='gray.400'>
               Bet Now
             </Tab>
-            <Tab color='gray.400'>Withdraw</Tab>
+            <Tab color='gray.400' isDisabled>
+              Withdraw
+            </Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -42,15 +44,6 @@ const ActionNav = () => {
               <p></p>
             </TabPanel>
           </TabPanels>
-          {/* <Box className='options'>
-            <Box className='select-options'>Open Bets</Box>
-            <Box className='option-line'></Box>
-            <Box className='select-options'>Open Bets</Box>
-            <Box className='option-line'></Box>
-            <Box className='select-options'>Bet With Your Account</Box>
-            <Box className='option-line'></Box>
-            <Box className='select-options'>Collect Your Winnings</Box>
-          </Box> */}
         </Tabs>
       </Box>
     </>
