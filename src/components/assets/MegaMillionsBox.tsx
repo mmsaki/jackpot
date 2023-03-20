@@ -44,18 +44,17 @@ const MegaMillionsBox = () => {
         bg='whiteAlpha.400'
         className='mega-millions'
       >
-        <Box spacing='8'>
-          <Box>
+        <Box>
+          <Box mb='8'>
             <Text fontSize='larger' fontWeight='bold'>
               MEGA MILLIONS
               <Badge ml='1' fontSize='0.8em' color='green'>
                 New
               </Badge>
             </Text>
-
             <Text>~500 ETH Balance</Text>
           </Box>
-          <Box>
+          <Box mb='8'>
             <Text fontSize='lg' fontWeight='normal'>
               Time left to buy
             </Text>
@@ -67,7 +66,7 @@ const MegaMillionsBox = () => {
               />
             </Text>
           </Box>
-          <Box>
+          <Box mb='8'>
             <Stat>
               <StatLabel fontSize='lg'>Tokens remaining</StatLabel>
               <StatNumber>4,320</StatNumber>
@@ -77,7 +76,7 @@ const MegaMillionsBox = () => {
               </StatHelpText>
             </Stat>
           </Box>
-          <Box>
+          <Box mb='8'>
             <Text fontSize='larger' fontWeight='thin'>
               WINNING NUMBERS
             </Text>
