@@ -21,9 +21,9 @@ const TopNav = () => {
       </Box>
       <Box className='right-nav'>
         <Box className='nav-links'>
-          <Text>Last Winner</Text>
-          <Text>Add Calendar</Text>
-          <Text>About Us</Text>
+          <Text className='nav-link'>Last Winner</Text>
+          <Text className='nav-link'>Add Calendar</Text>
+          <Text className='nav-link'>About Us</Text>
         </Box>
         <PlayButton />
       </Box>
