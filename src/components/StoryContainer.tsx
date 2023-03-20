@@ -19,7 +19,7 @@ const StoryContainer = () => {
       <List spacing={3} className='story-text'>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green' />
-          Choose Your LUCKY Bet!
+          Choose your LUCKY Bet multiplier and Top UP!
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color='green' />
