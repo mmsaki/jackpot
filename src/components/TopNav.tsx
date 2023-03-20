@@ -7,25 +7,27 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
+  Box,
+  Text,
 } from '@chakra-ui/react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { ConnectKitButton } from 'connectkit';
 
 const TopNav = () => {
   return (
-    <div className='top-nav'>
-      <div>
-        <h1 className='jackpot-header'>Jackpot</h1>
-      </div>
-      <div className='right-nav'>
-        <div className='nav-links'>
-          <p>Last Winner</p>
-          <p>Add Calendar</p>
-          <p>About Us</p>
-        </div>
+    <Box className='top-nav'>
+      <Box>
+        <h1 className='jackpot-header'>Jackpot Gö</h1>
+      </Box>
+      <Box className='right-nav'>
+        <Box className='nav-links'>
+          <Text>Last Winner</Text>
+          <Text>Add Calendar</Text>
+          <Text>About Us</Text>
+        </Box>
         <PlayButton />
-      </div>
-      <div className='menu-items'>
+      </Box>
+      <Box className='menu-items'>
         <Menu>
           <MenuButton
             as={IconButton}
@@ -62,8 +64,8 @@ const TopNav = () => {
             </ConnectKitButton.Custom>
           </MenuList>
         </Menu>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

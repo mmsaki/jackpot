@@ -1,10 +1,11 @@
+import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='footer'>
-      <p>Made with ❤️ by Team 3</p>
-    </div>
+    <Box className='footer'>
+      <Text>Made with ❤️ by Team 3</Text>
+    </Box>
   );
 };
 

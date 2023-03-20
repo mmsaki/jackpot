@@ -7,6 +7,7 @@ import { WagmiConfig, createClient } from 'wagmi';
 import { goerli } from 'wagmi/chains';
 import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 import { ChakraProvider } from '@chakra-ui/react';
+import theme from './theme';
 
 const client = createClient(
   getDefaultClient({
@@ -22,7 +23,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <WagmiConfig client={client}>
         <ConnectKitProvider theme='auto'>
           <App />

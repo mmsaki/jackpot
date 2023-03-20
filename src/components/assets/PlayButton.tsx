@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ConnectKitButton } from 'connectkit';
+import { Button } from '@chakra-ui/react';
 
 const PlayButton = () => {
   return (
@@ -17,9 +18,9 @@ const PlayButton = () => {
           truncatedAddress,
         }) => {
           return (
-            <button onClick={show} className='play-button'>
+            <Button onClick={show} className='play-button'>
               {isConnected ? 'Log Out' : 'Play Now'}
-            </button>
+            </Button>
           );
         }}
       </ConnectKitButton.Custom>

@@ -1,6 +1,7 @@
 import React from 'react';
 import WinningNumbers from './WinningNumbers';
 import Countdown, { CountdownRenderProps, zeroPad } from 'react-countdown';
+import { Box, Link, Text } from '@chakra-ui/react';
 
 const MegaMillionsBox = () => {
   const Completionist = () => <span>You are good to go!</span>;
@@ -14,45 +15,48 @@ const MegaMillionsBox = () => {
       return <Completionist />;
     } else {
       return (
-        <span>
+        <Text>
           {zeroPad(hours)} : {zeroPad(minutes)} : {zeroPad(seconds)}
-        </span>
+        </Text>
       );
     }
   };
 
   return (
-    <div className='action-box'>
-      <div className='mega-millions'>
-        <div>
-          <h3>MEGA MILLIONS</h3>
-          <p>500 ETH Balance</p>
-        </div>
-        <div>
-          <h3>
+    <Box className='action-box'>
+      <Box className='mega-millions'>
+        <Box>
+          <Text>MEGA MILLIONS</Text>
+          <Text>500 ETH Balance</Text>
+        </Box>
+        <Box>
+          <Text>
             <Countdown
               renderer={renderer}
               date={Date.now() + 5000000}
               precision={3}
             />
-          </h3>
-          <p>Time left to buy</p>
-        </div>
-        <div>
-          <h3>4,320</h3>
-          <p>Tokens remaining</p>
-        </div>
-        <div>
-          <h4>WINNING NUMBERS</h4>
-          <h6>
-            results from block <a href='/'>865432</a>
-          </h6>
-        </div>
-        <div>
+          </Text>
+          <Text>Time left to buy</Text>
+        </Box>
+        <Box>
+          <Text>4,320</Text>
+          <Text>Tokens remaining</Text>
+        </Box>
+        <Box>
+          <Text>WINNING NUMBERS</Text>
+          <Text>
+            results from block{' '}
+            <Link color='#0f5ccf' href='/'>
+              865432
+            </Link>
+          </Text>
+        </Box>
+        <Box>
           <WinningNumbers />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
