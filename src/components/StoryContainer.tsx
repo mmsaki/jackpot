@@ -27,12 +27,12 @@ const StoryContainer = () => {
               {'. '}
             </Text>
             <Highlight
-              query='Play and Win all the contract balance on Göerli'
+              query='Play and Win the contract balance on Göerli'
               styles={{ px: '1', py: '1', bg: 'red.100' }}
             >
               Winning numbers, draw dates, and jackpots winners are selected
-              randomly for all lottery games. Play and win all the contract
-              balance on Göerli.
+              randomly for all lottery games. Play and win the contract balance
+              on Göerli.
             </Highlight>
           </Text>
         </Box>
