@@ -20,14 +20,16 @@ const ActionNav = () => {
       <Box className='action-nav'>
         <Tabs size='lg' variant='line' className='options' align='center'>
           <TabList>
-            <Tab color='gray.400'>Open Bets</Tab>
-            <Tab className='top-up' color='gray.400'>
+            <Tab id='open-bets' color='gray.400'>
+              Open Bets
+            </Tab>
+            <Tab id='top-up' className='top-up' color='gray.400'>
               Top Up
             </Tab>
-            <Tab className='bet' color='gray.400'>
+            <Tab id='bet' className='bet' color='gray.400'>
               Bet Now
             </Tab>
-            <Tab color='gray.400' isDisabled>
+            <Tab id='withdraw' color='gray.400' isDisabled>
               Withdraw
             </Tab>
           </TabList>
