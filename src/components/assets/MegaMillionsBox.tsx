@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import ToastBetOpen from './ToastBetOpen';
+// import ToastBetOpen from './ToastBetOpen';
 
 const blockTarget = '3123691';
 
@@ -56,7 +56,7 @@ const MegaMillionsBox = () => {
               </Badge>
             </Text>
             <Text>~500 ETH Balance</Text>
-            <ToastBetOpen />
+            {/* <ToastBetOpen /> */}
           </Box>
           <Box mb='8'>
             <Text fontSize='lg' fontWeight='normal'>

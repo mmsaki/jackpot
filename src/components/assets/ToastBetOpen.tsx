@@ -1,15 +1,26 @@
 import { Button, useToast, Wrap, WrapItem } from '@chakra-ui/react';
 import React from 'react';
-import { useContractRead } from 'wagmi';
+import {
+  useContractRead,
+  useContractWrite,
+  usePrepareContractWrite,
+} from 'wagmi';
 import lottery from '../../abi/Lottery.json';
 
 const ToastBetOpen = () => {
   const toast = useToast();
-  const { data, isError, isLoading } = useContractRead({
+  let { data, isError, isLoading } = useContractRead({
     address: '0x921fFD1C2471b153fbbF374E6887A662219b2dFC',
     abi: lottery.abi,
     functionName: 'betsOpen',
   });
+
+  const { config, error } = usePrepareContractWrite({
+    address: '0x921fFD1C2471b153fbbF374E6887A662219b2dFC',
+    abi: lottery.abi,
+    functionName: 'openBets',
+  });
+  const { write } = useContractWrite(config);
 
   return (
     <Button
@@ -19,17 +30,19 @@ const ToastBetOpen = () => {
       color='green'
       mt='5'
       borderRadius='lg'
-      onClick={() =>
-        toast({
-          title: `Checking if Bets are open from etherscan. Results : ${data}`,
-          status: 'info',
-          isClosable: true,
-          containerStyle: {
-            bg: 'blue',
-            borderRadius: '2xl',
-          },
-        })
-      }
+      disabled={!write}
+      onClick={() => {
+        write?.();
+        // toast({
+        //   title: `Checking if Bets are open from etherscan. Results : ${data}`,
+        //   status: 'info',
+        //   isClosable: true,
+        //   containerStyle: {
+        //     bg: 'blue',
+        //     borderRadius: '2xl',
+        //   },
+        // });
+      }}
     >
       Check Status
     </Button>
