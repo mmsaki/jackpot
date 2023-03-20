@@ -44,7 +44,7 @@ const MegaMillionsBox = () => {
         bg='whiteAlpha.400'
         className='mega-millions'
       >
-        <Stack spacing='8'>
+        <Box spacing='8'>
           <Box>
             <Text fontSize='larger' fontWeight='bold'>
               MEGA MILLIONS
@@ -53,18 +53,18 @@ const MegaMillionsBox = () => {
               </Badge>
             </Text>
 
-            <Text>500 ETH Balance</Text>
+            <Text>~500 ETH Balance</Text>
           </Box>
           <Box>
+            <Text fontSize='lg' fontWeight='normal'>
+              Time left to buy
+            </Text>
             <Text fontSize='larger' fontWeight='bold'>
               <Countdown
                 renderer={renderer}
                 date={Date.now() + 5000000}
                 precision={3}
               />
-            </Text>
-            <Text fontSize='lg' fontWeight='normal'>
-              Time left to buy
             </Text>
           </Box>
           <Box>
@@ -94,7 +94,7 @@ const MegaMillionsBox = () => {
           <Box>
             <WinningNumbers />
           </Box>
-        </Stack>
+        </Box>
       </Card>
     </Box>
   );
