@@ -8,7 +8,7 @@ import { sepolia } from 'wagmi/chains';
 import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme';
-import Fonts from 'theme/Fonts';
+import Fonts from './theme/Fonts';
 
 const client = createClient(
   getDefaultClient({
