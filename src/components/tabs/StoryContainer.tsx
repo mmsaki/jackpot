@@ -46,7 +46,7 @@ const StoryContainer = () => {
           >
             Winning numbers, draw dates, and jackpots winners are selected
             randomly for all lottery games. Play and win the contract balance on
-            Göerli.
+            Göerli / Sepolia.
           </Highlight>
         </ListItem>
       </List>
