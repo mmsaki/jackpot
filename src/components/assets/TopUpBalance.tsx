@@ -102,14 +102,14 @@ const TopUpBalance = () => {
       </VStack>
       <HStack maxW='300px' mb='5'>
         <Button {...inc}>+</Button>
-        <Input {...input} height='40px' size='md' width='200px' border='2px' />
+        <Input {...input} height='40px' size='md' width='250px' border='2px' />
         <Button {...dec}>-</Button>
       </HStack>
       <VStack>
         <Button
           size='md'
           height='48px'
-          width='200px'
+          width='240px'
           bg='green'
           color='white'
           borderRadius='lg'
