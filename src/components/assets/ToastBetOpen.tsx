@@ -26,22 +26,22 @@ const ToastBetOpen = () => {
     <Button
       height='40px'
       width='200px'
-      border='2px solid green'
       color='green'
+      bg='gray.100'
       mt='5'
       borderRadius='lg'
       disabled={!write}
       onClick={() => {
         write?.();
-        // toast({
-        //   title: `Checking if Bets are open from etherscan. Results : ${data}`,
-        //   status: 'info',
-        //   isClosable: true,
-        //   containerStyle: {
-        //     bg: 'blue',
-        //     borderRadius: '2xl',
-        //   },
-        // });
+        toast({
+          title: `Checking if Bets are open from etherscan. Results : ${data}`,
+          status: 'info',
+          isClosable: true,
+          containerStyle: {
+            bg: 'blue',
+            borderRadius: '2xl',
+          },
+        });
       }}
     >
       Check Status
