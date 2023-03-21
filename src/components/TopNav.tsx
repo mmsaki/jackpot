@@ -9,6 +9,7 @@ import {
   MenuList,
   Box,
   Text,
+  Heading,
 } from '@chakra-ui/react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { ConnectKitButton } from 'connectkit';
@@ -17,7 +18,9 @@ const TopNav = () => {
   return (
     <Box className='top-nav'>
       <Box>
-        <h1 className='jackpot-header'>Jackpot Gö</h1>
+        <Heading color='#CC1313' size='3xl'>
+          Jackpot Gö
+        </Heading>
       </Box>
       <Box className='right-nav'>
         <Box className='nav-links'>

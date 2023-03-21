@@ -1,24 +1,9 @@
 // theme.ts (tsx file with usage of StyleFunctions, see 4.)
 import { extendTheme } from '@chakra-ui/react';
+import { Button } from './Button';
 
 const theme = extendTheme({
-  components: {
-    Button: {
-      baseStyle: {
-        fontWeight: 'normal',
-        fontSize: 'md',
-      },
-      variants: {
-        rounded: { borderRadius: '30px' },
-      },
-      defaultProps: {
-        fontSize: 'lg',
-        size: 'lg',
-        variant: 'rounded',
-        colorScheme: 'green',
-      },
-    },
-  },
+  components: { Button },
   colors: {
     blue: '#0f5ccf',
     green: '#36C36A',
@@ -27,9 +12,9 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    body: 'Inter, sans-serif',
-    heading: 'Georgia, serif',
-    mono: 'Menlo, monospace',
+    body: `'Inter'`,
+    heading: `'Kaisei Tokumin', 'serif'`,
+    mono: `'Menlo, monospace'`,
   },
   fontSizes: {
     xs: '0.75rem',

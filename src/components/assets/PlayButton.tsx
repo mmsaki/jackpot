@@ -13,23 +13,28 @@ const PlayButton = () => {
           show,
           hide,
           address,
-          ensName,
           chain,
           truncatedAddress,
         }) => {
           return (
-            <Button onClick={show} className='play-button' ml='6' mr='4'>
-              {isConnected && 'Log Out'}
+            <Button
+              borderRadius='3xl'
+              padding='5'
+              size='lg'
+              onClick={show}
+              className='play-button'
+            >
+              {isConnected && !isConnecting && 'Log Out '}
               {isConnecting && (
                 <Spinner
-                  thickness='4px'
+                  thickness='2px'
                   speed='0.65s'
                   emptyColor='gray'
                   color='blue'
                   size='lg'
                 />
               )}
-              {!isConnected && 'Play Now'}
+              {!isConnected && !isConnecting && 'Play Now'}
             </Button>
           );
         }}

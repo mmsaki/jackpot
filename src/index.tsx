@@ -8,6 +8,7 @@ import { sepolia } from 'wagmi/chains';
 import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme';
+import Fonts from 'theme/Fonts';
 
 const client = createClient(
   getDefaultClient({
@@ -24,6 +25,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
+      <Fonts />
       <WagmiConfig client={client}>
         <ConnectKitProvider theme='auto'>
           <App />

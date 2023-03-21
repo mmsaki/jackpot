@@ -3,8 +3,8 @@ import React from 'react';
 
 const TopStatusBar = () => {
   return (
-    <Box className='top-status-bar'>
-      <Text className='marquee'>
+    <Box bg='black' className='top-status-bar'>
+      <Text color='white' className='marquee'>
         We stand with Turkey 🇹🇷. Click here to show your support with a donation
         to the International Rescue Committe
       </Text>
