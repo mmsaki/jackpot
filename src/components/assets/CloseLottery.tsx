@@ -3,15 +3,12 @@ import React from 'react';
 import { usePrepareContractWrite, useContractWrite } from 'wagmi';
 import lottery from '../../abi/Lottery.json';
 
-const OpenBets = () => {
+const CloseLottery = () => {
   const toast = useToast();
-  const closeTime = Math.floor((Date.now() + 100000) / 1000);
-
   const { config } = usePrepareContractWrite({
     address: '0x921fFD1C2471b153fbbF374E6887A662219b2dFC',
     abi: lottery.abi,
-    functionName: 'openBets',
-    args: [closeTime],
+    functionName: 'closeLottery',
   });
   const { write, error, isSuccess } = useContractWrite(config);
 
@@ -20,14 +17,14 @@ const OpenBets = () => {
       <Button
         height='40px'
         width='200px'
-        color='green'
+        color='red'
         bg='gray.100'
         mt='5'
         borderRadius='lg'
         disabled={!write}
         onClick={() => write?.()}
       >
-        Open Bets
+        Close Lottery
       </Button>
       {error &&
         (() =>
@@ -43,7 +40,7 @@ const OpenBets = () => {
       {isSuccess &&
         (() =>
           toast({
-            title: `Bets have been opened : ${isSuccess} 🚀`,
+            title: `Bets have been Close : ${isSuccess} 🚀`,
             status: 'info',
             isClosable: true,
             containerStyle: {
@@ -54,5 +51,4 @@ const OpenBets = () => {
     </>
   );
 };
-
-export default OpenBets;
+export default CloseLottery;

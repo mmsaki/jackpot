@@ -15,7 +15,9 @@ import {
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import ToastBetOpen from './ToastBetOpen';
+import ToastBetOpen from './CheckBets';
+import OpenBets from './OpenBets';
+import CloseLottery from './CloseLottery';
 
 const blockTarget = '3123691';
 
@@ -68,6 +70,7 @@ const MegaMillionsBox = () => {
                 date={Date.now() + 5000000}
                 precision={3}
               />
+              <OpenBets />
             </Text>
           </Box>
           <Box mb='8'>
@@ -79,6 +82,7 @@ const MegaMillionsBox = () => {
                 9.05%
               </StatHelpText>
             </Stat>
+            <CloseLottery />
           </Box>
           <Box mb='8'>
             <Text fontSize='larger' fontWeight='thin'>
